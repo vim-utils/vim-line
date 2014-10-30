@@ -1,0 +1,47 @@
+*line.txt*	vim "inner line" text object.
+
+Author: Bruno Sutic <https://www.github.com/bruno->
+
+INTRODUCTION					*line*
+
+Vim "inner line" text object works on the text inside the line. Leading and
+trailing whitespace is ignored.
+
+"Around line" mappings are unnecessary because vim has those built in.
+Check |cc|, |yy|, |dd|
+
+
+OPERATOR MAPS					*line-maps*
+
+						*line-_* *line-<underscore>*
+_ <underscore>		Operator map that selects text inside the line,
+			ignoring the leading and trailing whitespace.
+			Equivalent to '^vg_' + |operator|.
+
+						*g:line_default_mappings*
+To disable default map, add the following to your vimrc:
+>
+  let g:line_default_mappings = 0
+<
+EXAMPLES					*line-examples*
+
+v_			Visually selects all the text in a line, except the
+			leading and trailing whitespace.
+
+y_			Yank "inner line".
+
+CONTRIBUTING					*line-contributing*
+
+Contributing is welcome. Github repo:
+
+  https://github.com/bruno-/vim-line
+
+CHANGELOG					*line-changelog*
+
+	v0.0.1:	October 31, 2014	* Initial working version
+
+LICENSE						*line-license*
+
+Copyright (c) Bruno Sutic. Distributed under the MIT license.
+
+vim:tw=78:ts=8:ft=help:norl:
