@@ -5,14 +5,14 @@ Leading and trailing whitespace is ignored.
 
 ### Text object
 
-* `_` (underscore) - "inner line"
+`_` (underscore) - "inner line"
 
 ### Examples
 
-* `v_` visually selects all the text in a line, except the
+- `v_` visually selects all the text in a line, except the
   leading and trailing whitespace.
 
-* `y_` yank "inner line".
+- `y_` yank "inner line".
 
 ### Why?
 
@@ -21,10 +21,10 @@ It's shorter to type than `^vg_` + operator.
 ### Installation
 
 * Vundle<br/>
-`Plugin 'bruno-/vim-line'`
+  `Plugin 'bruno-/vim-line'`
 
 * Pathogen<br/>
-`git clone git://github.com/bruno-/vim-line.git ~/.vim/bundle/vim-line`
+  `git clone git://github.com/bruno-/vim-line.git ~/.vim/bundle/vim-line`
 
 ### License
 
