@@ -14,7 +14,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! line#inner()
-  mark '
+  norm! m`
   keepj norm! ^vg_
 endfunction
 
