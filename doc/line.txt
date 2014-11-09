@@ -38,6 +38,7 @@ Contributing is welcome. Github repo:
 
 CHANGELOG					*line-changelog*
 
+	v2.0.0:	November 09, 2014	* delete operator handled specially
 	v1.0.1:	October 31, 2014	* Remember position
 	v1.0.0:	October 31, 2014	* v1.0.0
 	v0.0.1:	October 31, 2014	* Initial working version
