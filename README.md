@@ -14,6 +14,8 @@ Leading and trailing whitespace is ignored.
 
 - `y_` yank "inner line".
 
+- `d_` delete the whole line, but only "inner line" gets into the register.
+
 ### Why?
 
 It's shorter to type than `^vg_` + operator.

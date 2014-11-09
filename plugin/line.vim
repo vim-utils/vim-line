@@ -17,12 +17,22 @@ function! line#inner()
   keepj norm! ^vg_
 endfunction
 
-onoremap <silent> <Plug>(inner_line) :<C-U>call line#inner()<CR>
-xnoremap <silent> <Plug>(inner_line) :<C-U>call line#inner()<CR>
+" Special handling for the 'delete' operator:
+" it deletes the whole line but only the "inner" line gets into the register
+function! line#inner_delete(reg)
+  norm! m`
+  exec 'keepj norm! ^vg_"'.a:reg.'d'
+  norm! "_dd
+endfunction
+
+onoremap <silent> <Plug>(inner_line)        :<C-U>call line#inner()<CR>
+nnoremap <silent> <Plug>(inner_line_delete) :<C-U>call line#inner_delete(v:register)<CR>
+xnoremap <silent> <Plug>(inner_line)        :<C-U>call line#inner()<CR>
 
 if get(g:, 'line_default_mappings', 1)
-  omap <silent> _ <Plug>(inner_line)
-  xmap <silent> _ <Plug>(inner_line)
+  omap     <silent> _  <Plug>(inner_line)
+  nnoremap <silent> d_ <Plug>(inner_line_delete)
+  xmap     <silent> _  <Plug>(inner_line)
 endif
 
 let &cpo = s:save_cpo
