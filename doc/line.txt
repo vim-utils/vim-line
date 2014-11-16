@@ -17,6 +17,8 @@ OPERATOR MAPS					*line-maps*
 _ <underscore>		Operator map that selects text inside the line,
 			ignoring the leading and trailing whitespace.
 			Equivalent to '^vg_' + |operator|.
+			'd_' deletes the whole line, but only "inner line"
+			gets into the register.
 
 						*g:line_default_mappings*
 To disable default map, add the following to your vimrc:
@@ -38,6 +40,7 @@ Contributing is welcome. Github repo:
 
 CHANGELOG					*line-changelog*
 
+	v2.1.0:	November 16, 2014	* fix a bug with 'd_'
 	v2.0.0:	November 09, 2014	* delete operator handled specially
 	v1.0.1:	October 31, 2014	* Remember position
 	v1.0.0:	October 31, 2014	* v1.0.0

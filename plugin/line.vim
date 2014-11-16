@@ -30,9 +30,9 @@ nnoremap <silent> <Plug>(inner_line_delete) :<C-U>call line#inner_delete(v:regis
 xnoremap <silent> <Plug>(inner_line)        :<C-U>call line#inner()<CR>
 
 if get(g:, 'line_default_mappings', 1)
-  omap     <silent> _  <Plug>(inner_line)
-  nnoremap <silent> d_ <Plug>(inner_line_delete)
-  xmap     <silent> _  <Plug>(inner_line)
+  omap <silent> _  <Plug>(inner_line)
+  nmap <silent> d_ <Plug>(inner_line_delete)
+  xmap <silent> _  <Plug>(inner_line)
 endif
 
 let &cpo = s:save_cpo
