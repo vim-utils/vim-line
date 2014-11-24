@@ -40,6 +40,7 @@ Contributing is welcome. Github repo:
 
 CHANGELOG					*line-changelog*
 
+	v2.2.0:	November 24, 2014	* autoload functions
 	v2.1.0:	November 16, 2014	* fix a bug with 'd_'
 	v2.0.0:	November 09, 2014	* delete operator handled specially
 	v1.0.1:	October 31, 2014	* Remember position
